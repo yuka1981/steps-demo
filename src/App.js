@@ -11,16 +11,16 @@ const App = () => {
 
   const handlePrevious = () => {
     if (step > 1) {
-      setStep(step - 1);
+      setStep((prevStep) => prevStep - 1);
     }
   };
   const handleNext = () => {
     if (step < 3) {
-      setStep(step + 1);
+      setStep((prevStep) => prevStep + 1);
     }
   };
   const handleIsOpen = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
